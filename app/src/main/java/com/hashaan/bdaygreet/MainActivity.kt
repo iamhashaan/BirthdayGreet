@@ -13,12 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         btnCreateBirthdayCard.setOnClickListener {
 
+                val name = edTextNameOfPerson.editableText.toString()
+                val intent = Intent(this, BirthdayGreetActivity::class.java)
+                intent.putExtra(BirthdayGreetActivity.NAME_EXTRA,name)
+                startActivity(intent)
 
-            val name = edTextNameOfPerson.editableText.toString()
-            val intent = Intent(this,BirthdayGreetActivity::class.java)
-            intent.putExtra(BirthdayGreetActivity.NAME_EXTRA,name)
-
-            startActivity(intent)
         }
     }
 }
